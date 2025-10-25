@@ -47,14 +47,17 @@ const items = [
 
 function Footer() {
   return (
-    <footer className="px-5 ">
-      <div className="gap-6 grid grid-cols-2">
+    <footer className="px-5 mt-10 ">
+      <div className="gap-6 grid grid-cols-2 lg:grid-cols-4 lg:place-content-center lg:px-15 ">
         {items.map((item) => (
           <div key={item.title} className="space-y-4">
             <p className="text-2xl text-zinc-50">{item.title}</p>
             <ul className="space-y-3">
               {item.list.map((item) => (
-                <li className="text-zinc-600 text-base text-nowrap" key={item}>
+                <li
+                  className="text-zinc-600 text-base lg:text-lg text-nowrap"
+                  key={item}
+                >
                   {item}
                 </li>
               ))}
@@ -63,54 +66,57 @@ function Footer() {
         ))}
       </div>
 
-      <p className="text-2xl text-zinc-50 my-6">Resources</p>
-      <ul className="flex flex-row  gap-4 flex-wrap">
-        <li>
-          <Button
-            type="small"
-            href=""
-            title={
-              <>
-                Whitepapers <IoIosArrowForward className="text-yellow-400" />
-              </>
-            }
-          />
-        </li>
-        <li>
-          <Button
-            type="small"
-            href=""
-            title={
-              <>
-                Ebooks <IoIosArrowForward className="text-yellow-400" />
-              </>
-            }
-          />
-        </li>
-        <li>
-          <Button
-            type="small"
-            href=""
-            title={
-              <>
-                Reports <IoIosArrowForward className="text-yellow-400" />
-              </>
-            }
-          />
-        </li>
-        <li>
-          <Button
-            type="small"
-            href=""
-            title={
-              <>
-                Research Papers{" "}
-                <IoIosArrowForward className="text-yellow-400" />
-              </>
-            }
-          />
-        </li>
-      </ul>
+      <div>
+        {" "}
+        <p className="text-2xl text-zinc-50 my-6">Resources</p>
+        <ul className="flex flex-row  gap-4 flex-wrap">
+          <li>
+            <Button
+              type="small"
+              href=""
+              title={
+                <>
+                  Whitepapers <IoIosArrowForward className="text-yellow-400" />
+                </>
+              }
+            />
+          </li>
+          <li>
+            <Button
+              type="small"
+              href=""
+              title={
+                <>
+                  Ebooks <IoIosArrowForward className="text-yellow-400" />
+                </>
+              }
+            />
+          </li>
+          <li>
+            <Button
+              type="small"
+              href=""
+              title={
+                <>
+                  Reports <IoIosArrowForward className="text-yellow-400" />
+                </>
+              }
+            />
+          </li>
+          <li>
+            <Button
+              type="small"
+              href=""
+              title={
+                <>
+                  Research Papers{" "}
+                  <IoIosArrowForward className="text-yellow-400" />
+                </>
+              }
+            />
+          </li>
+        </ul>
+      </div>
 
       <div className="py-10 mt-10 border-t border-zinc-600 flex flex-col gap-7 items-center justify-center">
         <div className="text-zinc-50 text-3xl flex flex-row gap-5 ">

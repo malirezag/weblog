@@ -12,7 +12,7 @@ type Type = {
 
 const card = {
   simple: "mx-7 my-5 rounded-xl px-4 pt-7 border border-zinc-700 bg-zinc-900",
-  full: "mx-5 py-10 border-t border-b border-zinc-800 flex flex-row items-center justify-between",
+  full: "mx-5 lg:mx-0 lg:px-6 py-10 border-t border-b border-zinc-800 flex flex-row items-center justify-between lg:border-t-0 lg:border-b-0",
 };
 
 function DataCard({ src, mainTitle, expTitle, numReport, button, type }: Type) {
