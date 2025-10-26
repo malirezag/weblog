@@ -28,7 +28,7 @@ function Header() {
           <p>FutureTech</p>
         </div>
         <NavItems />
-        <button className="bg-yellow-500 text-black p-2 rounded">
+        <button className="bg-yellow-500 text-black p-2 rounded hidden lg:block">
           Contact Us
         </button>
         <RiMenuFill className="text-3xl lg:hidden" />

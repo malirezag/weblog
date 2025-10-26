@@ -4,6 +4,7 @@ import { BiHeart, BiSend } from "react-icons/bi";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { LuMessageCircle } from "react-icons/lu";
 import Button from "./Button";
+import LikeAndComment from "../_components/LikeAndComment";
 
 function UserPostCard({
   src,
@@ -49,32 +50,14 @@ function UserPostCard({
           </p>
         </div>
 
-        <div className="flex flex-row gap-3 my-5">
-          <div className="rounded-full border border-zinc-700 bg-zinc-900 flex flex-row text-zinc-400 items-center px-3 py-1.5 gap-1.5 justify-center m">
-            <BiHeart className="text-2xl" />
-            <p>12.5k</p>
-          </div>{" "}
-          <div className="rounded-full border border-zinc-700 bg-zinc-900 flex flex-row text-zinc-400 items-center px-3 py-1.5 gap-1.5 justify-center m">
-            <LuMessageCircle className="text-2xl" />
-            <p>33</p>
-          </div>
-          <div className="rounded-full border border-zinc-700 bg-zinc-900 flex flex-row text-zinc-400 items-center px-3 py-1.5 gap-1.5 justify-center m">
-            <BiSend className="text-2xl" />
-            <p>98</p>
-          </div>
-        </div>
+        <LikeAndComment />
       </div>
 
       <Button
         type="small"
         className="px-2 text-nowrap hidden lg:block  "
         href="#"
-        title={
-          <>
-            View Blog
-            <IoIosArrowRoundForward className="text-3xl text-yellow-300" />
-          </>
-        }
+        title=" View Blog"
       />
     </div>
   );
