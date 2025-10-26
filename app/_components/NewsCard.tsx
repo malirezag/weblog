@@ -11,8 +11,8 @@ type Type = {
 
 function NewsCard({ title, image_url, category }: Type) {
   return (
-    <div className="px-5 flex flex-col justify-center  max-w-110">
-      <div className="flex-1 relative min-h-50 w-95  mb-5 mx-auto ">
+    <div className="px-5 flex flex-col justify-center max-w-90">
+      <div className="flex-1 relative min-h-50 w-full  mb-5 mx-auto ">
         <Image
           src={
             image_url ??
