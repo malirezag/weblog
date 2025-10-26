@@ -7,14 +7,21 @@ async function page() {
 
   return (
     <div className="flex flex-col gap-5 py-15">
-      {newsData.map((item: any) => (
-        <NewsCard
-          category={item.category}
-          image_url={item.image_url}
-          title={item.title}
-          key={item.article_id}
-        />
-      ))}
+      {newsData.map(
+        (item: {
+          category: string;
+          image_url: string;
+          title: string;
+          article_id: string;
+        }) => (
+          <NewsCard
+            category={item.category}
+            image_url={item.image_url}
+            title={item.title}
+            key={item.article_id}
+          />
+        )
+      )}
     </div>
   );
 }
