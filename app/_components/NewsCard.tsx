@@ -7,12 +7,13 @@ type Type = {
   title: string;
   image_url: string;
   category: string;
+  article_id: string;
 };
 
-function NewsCard({ title, image_url, category }: Type) {
+function NewsCard({ title, image_url, category, article_id }: Type) {
   return (
-    <div className="px-5 flex flex-col justify-center max-w-90">
-      <div className="flex-1 relative min-h-50 w-full  mb-5 mx-auto ">
+    <div className="px-5 flex flex-col justify-center max-w-90 lg:max-w-100">
+      <div className="flex-1 relative min-h-50 lg:min-h-60 w-full mb-5 mx-auto ">
         <Image
           src={
             image_url ??
@@ -20,15 +21,15 @@ function NewsCard({ title, image_url, category }: Type) {
           }
           alt={title}
           fill
-          className="object-cover object-center rounded-xl"
+          className="object-cover object-center rounded-xl "
           unoptimized
         />
       </div>
-      <p className="text-xl text-zinc-100 ">{title}</p>
+      <p className="text-xl text-zinc-100 truncate ">{title}</p>
       <p className=" text-zinc-500">{category}</p>
       <div className="flex flex-roe justify-between items-center">
         <LikeAndComment comment={false} />
-        <Button title="Read More" href="#" type="small" />
+        <Button title="Read More" href={`/news/${article_id}`} type="small" />
       </div>
     </div>
   );
